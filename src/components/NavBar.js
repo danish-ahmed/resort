@@ -3,6 +3,7 @@ import { FaAlignRight } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 import logo from "../images/logo.svg";
 import { Link } from "react-router-dom";
+import Links from "./Links";
 
 export default class NavBar extends React.Component {
 	state = {
@@ -31,20 +32,7 @@ export default class NavBar extends React.Component {
 							)}
 						</button>
 					</div>
-					<ul
-						className={
-							!this.state.isOpen
-								? "nav-links show-nav"
-								: "nav-links"
-						}
-					>
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/rooms">Rooms</Link>
-						</li>
-					</ul>
+					<Links isOpen />
 				</div>
 			</nav>
 		);
